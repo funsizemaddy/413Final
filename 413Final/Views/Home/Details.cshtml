@@ -1,0 +1,32 @@
+﻿
+@{      ViewData["Title"] = "Details";
+}
+
+@model Quote
+
+<div class="container px-5">
+    <h1 class="text-center">Details for Quote @ViewBag.id</h1>
+    <br />
+    <div class="row">
+        <div class="col-md-auto">
+            <p class="font-weight-bold">Quote ID</p>
+            <p class="font-weight-bold">Quote</p>
+            <p class="font-weight-bold">Author</p>
+            <p class="font-weight-bold">Date</p>
+            <p class="font-weight-bold">Subject</p>
+            <p class="font-weight-bold">Citation</p>
+
+            <a class="btn btn-warning" asp-controller="Home" asp-action="Add" asp-route-id="@Model.id">Edit</a>
+            <a class="btn btn-danger" asp-controller="Home" asp-action="Delete" asp-route-id="@Model.id">Delete</a>
+        </div>
+
+        <div class="col">
+            <p>@Model.id</p>
+            <p>@Model.quote</p>
+            <p>@Model.author</p>
+            <p>@Model.date</p>
+            <p>@Model.subject</p>
+            <p>@Model.citation</p>
+        </div>
+    </div>
+</div>
